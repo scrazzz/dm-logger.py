@@ -3,7 +3,7 @@ A python script that logs Discord DMs on a user account.
 
 Author: scrazzz
 License: MIT
-Version: v0.1.0
+Version: v0.2.0
 """
 
 import dhooks
@@ -17,10 +17,11 @@ log = dhooks.Webhook.Async("URL") # Make a webhook in a server where you want to
 async def on_message(m):
     if m.author == bot.user or m.author.bot: # Ignore our messages and bot messages.
         return
-        
-    embed = dhooks.Embed(title=f"{m.author} ({m.author.id})")
-    embed.description = m.content
-    await log.send(embed=embed)
+    
+    if m.guild is None:
+        embed = dhooks.Embed(title=f"{m.author} ({m.author.id})")
+        embed.description = m.content
+        await log.send(embed=embed)
     
     await bot.process_commands(m)
     
