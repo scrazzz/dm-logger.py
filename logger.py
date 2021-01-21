@@ -1,3 +1,11 @@
+"""
+A python script that logs Discord DMs on a user account.
+
+Author: scrazzz
+License: MIT
+Version: v0.1.0
+"""
+
 import dhooks
 import discord
 from discord.ext import commands
