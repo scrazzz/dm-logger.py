@@ -7,6 +7,7 @@ Version: v0.4.0
 """
 
 import dhooks
+import asyncio
 import discord
 from discord.ext import commands
 
