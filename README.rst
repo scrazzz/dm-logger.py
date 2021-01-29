@@ -6,9 +6,23 @@ A Python script that logs Discord DMs on a user account.
 ==========
 Yes, this is against Discord's ToS and Discord can detect you using this.
 
-``Usage``
+``Getting started``
 ==========
-Edit the **URL** and **TOKEN** inside the code.
+Clone this repository:
+
+.. code:: sh
+    
+    git clone https://github.com/scrazzz/dm-logger.py
+    cd dm-logger.py
+    python3 -m pip install -r requirements.txt
+
+Now go to ``logger.py`` file and the **URL** and **TOKEN** inside the code.
+
+After that run the code:
+
+.. code:: sh
+    
+    python3 logger.py
 
 ``Changelog``
 ==========
