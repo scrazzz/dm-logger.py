@@ -16,7 +16,7 @@ Clone this repository:
     cd dm-logger.py
     python3 -m pip install -r requirements.txt
 
-Now go to ``logger.py`` file and the **URL** and **TOKEN** inside the code.
+Now go to ``logger.py`` file and then edit the **URL** and **TOKEN** inside the code.
 
 After that run the code:
 
@@ -31,4 +31,4 @@ After that run the code:
 - ``v0.3.0``: Removed Webhook.Async since it's not a huge problem of it being sync.
 - ``v0.3.1``: Code fix and logging attachments.
 - ``v0.4.0``: Log images and gifs ONLY properly.
-- ``v0.4.1``: Add missing imports.
+- ``v0.4.1``: Add missing imports and no_help command.
