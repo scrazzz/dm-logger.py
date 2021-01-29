@@ -5,13 +5,14 @@ Author: scrazzz
 License: MIT
 Version: v0.4.0
 """
+import asyncio
 
 import dhooks
-import asyncio
 import discord
+import aiohttp
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='!', self_bot=True)
+bot = commands.Bot(command_prefix='!', self_bot=True, help_command=None)
 
 # Make a webhook in a server where you want to log. Replace with your webhook url.
 log = dhooks.Webhook("URL")
