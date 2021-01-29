@@ -3,7 +3,7 @@ A python script that logs Discord DMs on a user account.
 
 Author: scrazzz
 License: MIT
-Version: v0.4.0
+Version: v0.4.1
 """
 import asyncio
 
@@ -59,4 +59,5 @@ async def on_message(m):
     
     await bot.process_commands(m)
     
+# replace TOKEN with your user token.
 bot.run("TOKEN", bot=False)
