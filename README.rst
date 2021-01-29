@@ -31,3 +31,4 @@ After that run the code:
 - ``v0.3.0``: Removed Webhook.Async since it's not a huge problem of it being sync.
 - ``v0.3.1``: Code fix and logging attachments.
 - ``v0.4.0``: Log images and gifs ONLY properly.
+- ``v0.4.1``: Add missing imports.
