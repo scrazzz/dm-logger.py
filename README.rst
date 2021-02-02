@@ -16,7 +16,7 @@ Clone this repository:
     cd dm-logger.py
     python3 -m pip install -r requirements.txt
 
-Now go to ``logger.py`` file and then edit the **URL** and **TOKEN** inside the code.
+Now go to ``logger.py`` file and edit the **URL** and **TOKEN** inside the code. With your own Webhook URL and Token.
 
 After that run the code:
 
@@ -24,7 +24,11 @@ After that run the code:
     
     python3 logger.py
 
-``Changelog``
+``Help``
+==========
+`Here <https://discord.gg/TfzsCCYwqJ>`_
+
+``Changelogs``
 ==========
 - ``v0.1.0``: Initial commit.
 - ``v0.2.0``: Code fix.
