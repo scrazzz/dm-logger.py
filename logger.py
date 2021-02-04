@@ -1,16 +1,14 @@
-"""
-A python script that logs Discord DMs on a user account.
-
-Author: scrazzz
-License: MIT
-Version: v0.4.1
-"""
 import asyncio
 
 import dhooks
 import discord
 import aiohttp
 from discord.ext import commands
+
+__author__ = "scrazzz"
+__license__ = "MIT"
+__version__ = "0.4.1"
+__maintainer__ = "scrazzz"
 
 bot = commands.Bot(command_prefix='!', self_bot=True, help_command=None)
 
