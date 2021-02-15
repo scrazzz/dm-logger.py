@@ -7,34 +7,30 @@ from discord.ext import commands
 
 __author__ = "scrazzz"
 __license__ = "MIT"
-__version__ = "0.4.1"
+__version__ = "0.5.0"
 __maintainer__ = "scrazzz"
 
 bot = commands.Bot(command_prefix='!', self_bot=True, help_command=None)
+bot.session = aiohttp.ClientSession(loop=bot.loop)
 
-# Make a webhook in a server where you want to log. Replace with your webhook url.
+# Make a webhook in a server where you want to log
+# to and replace with your webhook url.
 log = dhooks.Webhook("URL")
 
-# to log images and gifs ONLY.
-async def upload_image(img):
-    async with aiohttp.ClientSession() as sess:
+async def upload_image(file):
+    """This is for only logging file types of: png, jpg, jpeg, gif, ico, bmp, tif, tiff, and webm."""
+    async with bot.session.get(file) as resp:
+        bytes = await resp.read()
+        
         data = {
-            'key': '232565fc1a4f0d24578d9aeadc0b43ab', # you can use this or get your own api key from https://api.imgbb.com
-            'image': img
+            'image': bytes
+            'noembed': 'a-void'
         }
-        async with sess.post("https://api.imgbb.com/1/upload", data=data) as post:
+        async with bot.session.post("https://sxcu.net/upload", data=data) as post:
             js = await post.json()
-            
-            try:
-                url = js['data']['url']
-                return url
-                
-            # sometimes, very rarely it just wont upload
-            # so we ignore that.
-            # But make sure the API key is working or not.
-            except:
-                pass
-            
+            url = js['url']
+            return url
+
 @bot.event
 async def on_message(m):
     # ignore messages in servers.
@@ -52,10 +48,10 @@ async def on_message(m):
         for attach in m.attachments:
             url = await upload_image(attach.proxy_url)
             embed.add_field(name="\u200b", value=url, inline=False)
-                
+            
         log.send(embed=embed)
-    
+        
     await bot.process_commands(m)
-    
+
 # replace TOKEN with your user token.
 bot.run("TOKEN", bot=False)
