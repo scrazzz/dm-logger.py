@@ -36,3 +36,4 @@ After that run the code:
 - ``v0.3.1``: Code fix and logging attachments.
 - ``v0.4.0``: Log images and gifs ONLY properly.
 - ``v0.4.1``: Add missing import and no_help command.
+- ``v.0.5.0``: Better logging of attachments.
