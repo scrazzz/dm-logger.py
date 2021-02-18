@@ -6,16 +6,16 @@ labels: bug
 
 ## Summary
 
-<!-- A summary if your bug. -->
+<!-- A quick summary of your bug. -->
 
 ## Expected Results
 
-<!-- What you expected to happen. -->
+<!-- What you expect to happen. -->
 
 ## Actual Results
 
-<!-- What actually happend. -->
+<!-- What actually happens. -->
 
 ## Info
 
-<!-- Information like your discord.py version. You can also run `python -m discord -v` and paste that information. -->
+<!-- Information like your discord.py version. You can also run `python -m discord -v` and paste that information here. -->
