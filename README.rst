@@ -1,6 +1,6 @@
 ``NOTE``
 =========
-This script is no longer maintained and discord.py v1.7+ will not work with this. You may use any other versions >v1.7 to use it (as long as Discord doesn't break anything).
+This script is no longer maintained and discord.py v1.7+ will not work with this. You may use any other versions =< v1.6 to use it (as long as Discord doesn't break anything).
 
 ``dm-logger.py``
 ==========
