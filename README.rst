@@ -28,10 +28,6 @@ After that run the code:
     
     python3 logger.py
 
-``Help``
-==========
-`Here <https://discord.gg/TfzsCCYwqJ>`_
-
 ``Changelogs``
 ==========
 - ``v0.1.0``: Initial commit.
