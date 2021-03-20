@@ -7,7 +7,7 @@ from discord.ext import commands
 
 __author__ = "scrazzz"
 __license__ = "MIT"
-__version__ = "0.5.0"
+__version__ = "1.0.0"
 __maintainer__ = "scrazzz"
 
 bot = commands.Bot(command_prefix='!', self_bot=True, help_command=None)
