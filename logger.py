@@ -15,7 +15,7 @@ bot.session = aiohttp.ClientSession(loop=bot.loop)
 
 # Make a webhook in a server where you want to log
 # to and replace with your webhook url.
-log = dhooks.Webhook("URL")
+log = dhooks.Webhook.Async("URL")
 
 async def upload_image(file):
     """This is for only logging file types of: png, jpg, jpeg, gif, ico, bmp, tif, tiff, and webm."""
@@ -49,7 +49,8 @@ async def on_message(m):
             url = await upload_image(attach.proxy_url)
             embed.add_field(name="\u200b", value=url, inline=False)
             
-        log.send(embed=embed)
+        await log.send(embed=embed)
+        await log.close()
         
     await bot.process_commands(m)
 
