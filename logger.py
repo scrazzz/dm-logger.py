@@ -7,24 +7,24 @@ from discord.ext import commands
 
 __author__ = "scrazzz"
 __license__ = "MIT"
-__version__ = "1.0.0"
+__version__ = "1.2.0a"
 __maintainer__ = "scrazzz"
 
 bot = commands.Bot(command_prefix='!', self_bot=True, help_command=None)
-bot.session = aiohttp.ClientSession(loop=bot.loop)
+bot.session = aiohttp.ClientSession(loop=bot.loop) # won't work in Python 3.9
 
 # Make a webhook in a server where you want to log
 # to and replace with your webhook url.
 log = dhooks.Webhook.Async("URL")
 
 async def upload_image(file):
-    """This is for only logging file types of: png, jpg, jpeg, gif, ico, bmp, tif, tiff, and webm."""
+    """For only logging file types of: png, jpg, jpeg, gif, ico, bmp, tif, tiff, and webm."""
     async with bot.session.get(file) as resp:
         bytes = await resp.read()
         
         data = {
-            'image': bytes
-            'noembed': 'a-void'
+            'image': bytes,
+            'noembed': 'void'
         }
         async with bot.session.post("https://sxcu.net/upload", data=data) as post:
             js = await post.json()
